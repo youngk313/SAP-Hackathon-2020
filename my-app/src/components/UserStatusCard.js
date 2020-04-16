@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
-import SocialDistanceImg from '../../img/social_distance.png';
+import SocialDistanceImg from '../img/social_distance.png';
 
 const imgStyle = {
   width: '360px'
