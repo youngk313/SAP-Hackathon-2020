@@ -1,7 +1,7 @@
 import React from 'react';
 import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Text} from 'recharts';
-import * as aprilData from './locations/2020_APRIL.json';
-import {getLocationName, getLocationCoordinates} from './locationParser';
+import * as aprilData from '../locations/2020_APRIL.json';
+import {getLocationName, getLocationCoordinates} from '../locationParser';
 
 const data = [{name: 'BC', 'Number of Cases': 400, 'Number of Deaths': 300}, {name:'f', pv: [30]}]
 const margins = {top: 5, right: 5, left:5, bottom:5}
