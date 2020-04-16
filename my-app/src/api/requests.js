@@ -15,7 +15,7 @@ export const Location = {
         const records = await this.getAll();
 
         const filteredRecords = records.filter(record => record.timestampMs > getLastNthDay(N));
-        console.log(filteredRecords);
+
         return filteredRecords;
     }
 };
