@@ -1,0 +1,686 @@
+{
+  "timelineObjects" : [ {
+    "activitySegment" : {
+      "startLocation" : {
+        "latitudeE7" : 492785606,
+        "longitudeE7" : -1231152849
+      },
+      "endLocation" : {
+        "latitudeE7" : 492799288,
+        "longitudeE7" : -1231178057
+      },
+      "duration" : {
+        "startTimestampMs" : "1585959299108",
+        "endTimestampMs" : "1585959665274"
+      },
+      "distance" : 238,
+      "activityType" : "WALKING",
+      "confidence" : "HIGH",
+      "activities" : [ {
+        "activityType" : "WALKING",
+        "probability" : 97.83732295036316
+      }, {
+        "activityType" : "CYCLING",
+        "probability" : 0.7455436047166586
+      }, {
+        "activityType" : "IN_PASSENGER_VEHICLE",
+        "probability" : 0.6380971521139145
+      }, {
+        "activityType" : "RUNNING",
+        "probability" : 0.28964278753846884
+      }, {
+        "activityType" : "STILL",
+        "probability" : 0.26546947192400694
+      }, {
+        "activityType" : "IN_BUS",
+        "probability" : 0.11955522932112217
+      }, {
+        "activityType" : "MOTORCYCLING",
+        "probability" : 0.033959667780436575
+      }, {
+        "activityType" : "IN_TRAIN",
+        "probability" : 0.0308218935970217
+      }, {
+        "activityType" : "IN_SUBWAY",
+        "probability" : 0.01975833292817697
+      }, {
+        "activityType" : "IN_FERRY",
+        "probability" : 0.007944033131934702
+      }, {
+        "activityType" : "IN_TRAM",
+        "probability" : 0.007537313649663702
+      }, {
+        "activityType" : "SKIING",
+        "probability" : 0.0018379525499767624
+      }, {
+        "activityType" : "FLYING",
+        "probability" : 0.0015984633137122728
+      }, {
+        "activityType" : "SAILING",
+        "probability" : 8.316109415318351E-4
+      }, {
+        "activityType" : "IN_VEHICLE",
+        "probability" : 8.55660346132936E-5
+      } ],
+      "waypointPath" : {
+        "waypoints" : [ {
+          "latE7" : 492785530,
+          "lngE7" : -1231154022
+        }, {
+          "latE7" : 492798652,
+          "lngE7" : -1231175918
+        }, {
+          "latE7" : 492799682,
+          "lngE7" : -1231177444
+        } ]
+      }
+    }
+  }, {
+    "placeVisit" : {
+      "location" : {
+        "latitudeE7" : 492804947,
+        "longitudeE7" : -1231188965,
+        "placeId" : "ChIJcw2sWn5xhlQRwj4_8T_iJks",
+        "address" : "590 Robson St #200\nVancouver, BC V6B 2B7\nCanada",
+        "name" : "H-Mart",
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        },
+        "locationConfidence" : 94.28568
+      },
+      "duration" : {
+        "startTimestampMs" : "1585959665274",
+        "endTimestampMs" : "1585961846054"
+      },
+      "placeConfidence" : "HIGH_CONFIDENCE",
+      "centerLatE7" : 492803157,
+      "centerLngE7" : -1231188129,
+      "visitConfidence" : 92,
+      "otherCandidateLocations" : [ {
+        "latitudeE7" : 492813760,
+        "longitudeE7" : -1231195274,
+        "placeId" : "ChIJazn7iNFzhlQRBz4F0cWefXc",
+        "locationConfidence" : 1.6346464
+      }, {
+        "latitudeE7" : 492804825,
+        "longitudeE7" : -1231169216,
+        "placeId" : "ChIJ1ZIj9H5xhlQRezRqrA84yHQ",
+        "locationConfidence" : 1.6281582
+      }, {
+        "latitudeE7" : 492805110,
+        "longitudeE7" : -1231188247,
+        "placeId" : "ChIJn_MuTn5xhlQR4fqpgQ18Gfc",
+        "locationConfidence" : 1.6160343
+      }, {
+        "latitudeE7" : 492805271,
+        "longitudeE7" : -1231187971,
+        "placeId" : "ChIJt4UuTn5xhlQRDnaOJseB1Rs",
+        "locationConfidence" : 0.2034195
+      } ],
+      "editConfirmationStatus" : "NOT_CONFIRMED"
+    }
+  }, {
+    "activitySegment" : {
+      "startLocation" : {
+        "latitudeE7" : 492800745,
+        "longitudeE7" : -1231178660
+      },
+      "endLocation" : {
+        "latitudeE7" : 492790469,
+        "longitudeE7" : -1231161231
+      },
+      "duration" : {
+        "startTimestampMs" : "1585961846054",
+        "endTimestampMs" : "1585962009602"
+      },
+      "distance" : 172,
+      "activityType" : "WALKING",
+      "confidence" : "HIGH",
+      "activities" : [ {
+        "activityType" : "WALKING",
+        "probability" : 95.89625000953674
+      }, {
+        "activityType" : "IN_PASSENGER_VEHICLE",
+        "probability" : 1.8582392483949661
+      }, {
+        "activityType" : "CYCLING",
+        "probability" : 0.9408777579665184
+      }, {
+        "activityType" : "RUNNING",
+        "probability" : 0.5128863733261824
+      }, {
+        "activityType" : "STILL",
+        "probability" : 0.43716602958738804
+      }, {
+        "activityType" : "MOTORCYCLING",
+        "probability" : 0.13191557954996824
+      }, {
+        "activityType" : "IN_BUS",
+        "probability" : 0.1264612888917327
+      }, {
+        "activityType" : "IN_FERRY",
+        "probability" : 0.03736125072464347
+      }, {
+        "activityType" : "IN_TRAIN",
+        "probability" : 0.026173220248892903
+      }, {
+        "activityType" : "IN_SUBWAY",
+        "probability" : 0.009777398372534662
+      }, {
+        "activityType" : "SAILING",
+        "probability" : 0.007612491026520729
+      }, {
+        "activityType" : "FLYING",
+        "probability" : 0.007610254397150129
+      }, {
+        "activityType" : "SKIING",
+        "probability" : 0.004239815461914986
+      }, {
+        "activityType" : "IN_TRAM",
+        "probability" : 0.0033205004001501948
+      }, {
+        "activityType" : "IN_VEHICLE",
+        "probability" : 1.0373828445153777E-4
+      } ],
+      "waypointPath" : {
+        "waypoints" : [ {
+          "latE7" : 492800636,
+          "lngE7" : -1231178970
+        }, {
+          "latE7" : 492799644,
+          "lngE7" : -1231175918
+        }, {
+          "latE7" : 492790298,
+          "lngE7" : -1231161422
+        } ]
+      }
+    }
+  }, {
+    "placeVisit" : {
+      "location" : {
+        "latitudeE7" : 492785529,
+        "longitudeE7" : -1231150401,
+        "placeId" : "ChIJn3YYzX1xhlQRljM1sgzphVw",
+        "address" : "233 Robson St\nVancouver, BC V6B 2M1\nCanada",
+        "name" : "233 Robson St",
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        },
+        "locationConfidence" : 95.59449
+      },
+      "duration" : {
+        "startTimestampMs" : "1585962009602",
+        "endTimestampMs" : "1586393082192"
+      },
+      "placeConfidence" : "HIGH_CONFIDENCE",
+      "centerLatE7" : 492784203,
+      "centerLngE7" : -1231152367,
+      "visitConfidence" : 92,
+      "otherCandidateLocations" : [ {
+        "latitudeE7" : 492772139,
+        "longitudeE7" : -1231178657,
+        "placeId" : "ChIJO3hCPdZzhlQR798oCIPVhsA",
+        "locationConfidence" : 1.4713926
+      }, {
+        "latitudeE7" : 492796616,
+        "longitudeE7" : -1231153190,
+        "placeId" : "ChIJd2LQPXxxhlQRq56We3MHblo",
+        "locationConfidence" : 0.9555185
+      }, {
+        "latitudeE7" : 492804825,
+        "longitudeE7" : -1231169216,
+        "placeId" : "ChIJ1ZIj9H5xhlQRezRqrA84yHQ",
+        "locationConfidence" : 0.71894854
+      }, {
+        "latitudeE7" : 492783445,
+        "longitudeE7" : -1231154338,
+        "placeId" : "ChIJDVK6zn1xhlQRCAFIyxUU5_8",
+        "locationConfidence" : 0.375676
+      } ],
+      "editConfirmationStatus" : "NOT_CONFIRMED"
+    }
+  }, {
+    "activitySegment" : {
+      "startLocation" : {
+        "latitudeE7" : 492788942,
+        "longitudeE7" : -1231137473,
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        }
+      },
+      "endLocation" : {
+        "latitudeE7" : 492796650,
+        "longitudeE7" : -1231097195,
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        }
+      },
+      "duration" : {
+        "startTimestampMs" : "1586393082192",
+        "endTimestampMs" : "1586393387113"
+      },
+      "distance" : 304,
+      "activityType" : "WALKING",
+      "confidence" : "HIGH",
+      "activities" : [ {
+        "activityType" : "WALKING",
+        "probability" : 92.33941435813904
+      }, {
+        "activityType" : "STILL",
+        "probability" : 4.087170958518982
+      }, {
+        "activityType" : "IN_PASSENGER_VEHICLE",
+        "probability" : 0.9895171038806438
+      }, {
+        "activityType" : "CYCLING",
+        "probability" : 0.927629042416811
+      }, {
+        "activityType" : "IN_BUS",
+        "probability" : 0.546314986422658
+      }, {
+        "activityType" : "IN_SUBWAY",
+        "probability" : 0.37571967113763094
+      }, {
+        "activityType" : "IN_TRAIN",
+        "probability" : 0.30710443388670683
+      }, {
+        "activityType" : "RUNNING",
+        "probability" : 0.24148090742528439
+      }, {
+        "activityType" : "MOTORCYCLING",
+        "probability" : 0.0979009666480124
+      }, {
+        "activityType" : "IN_FERRY",
+        "probability" : 0.043517351150512695
+      }, {
+        "activityType" : "IN_TRAM",
+        "probability" : 0.032623420702293515
+      }, {
+        "activityType" : "FLYING",
+        "probability" : 0.007129211735446006
+      }, {
+        "activityType" : "SKIING",
+        "probability" : 0.001797166078176815
+      }, {
+        "activityType" : "SAILING",
+        "probability" : 0.0015646290194126777
+      }, {
+        "activityType" : "IN_VEHICLE",
+        "probability" : 0.0011236150385229848
+      } ],
+      "waypointPath" : {
+        "waypoints" : [ {
+          "latE7" : 492789268,
+          "lngE7" : -1231138000
+        }, {
+          "latE7" : 492811393,
+          "lngE7" : -1231080093
+        }, {
+          "latE7" : 492796707,
+          "lngE7" : -1231097259
+        } ]
+      }
+    }
+  }, {
+    "placeVisit" : {
+      "location" : {
+        "latitudeE7" : 492805556,
+        "longitudeE7" : -1231061111,
+        "placeId" : "ChIJ36zlvedzhlQRtVdcjZQtC6E",
+        "address" : "88 W Pender St\nVancouver, BC V6B 6N9\nCanada",
+        "name" : "International Village Mall",
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        },
+        "locationConfidence" : 98.29972
+      },
+      "duration" : {
+        "startTimestampMs" : "1586393387113",
+        "endTimestampMs" : "1586395714068"
+      },
+      "placeConfidence" : "HIGH_CONFIDENCE",
+      "childVisits" : [ {
+        "location" : {
+          "latitudeE7" : 492799334,
+          "longitudeE7" : -1231081955,
+          "placeId" : "ChIJY_YvuHtxhlQROmgdZbhFxXc",
+          "address" : "179 Keefer Pl\nVancouver, BC V6B 2L2\nCanada",
+          "name" : "T&T Supermarket",
+          "sourceInfo" : {
+            "deviceTag" : 2017462186
+          },
+          "locationConfidence" : 39.210476
+        },
+        "duration" : {
+          "startTimestampMs" : "1586393814433",
+          "endTimestampMs" : "1586394425838"
+        },
+        "placeConfidence" : "MEDIUM_CONFIDENCE",
+        "centerLatE7" : 492800247,
+        "centerLngE7" : -1231079244,
+        "visitConfidence" : 87,
+        "otherCandidateLocations" : [ {
+          "latitudeE7" : 492801114,
+          "longitudeE7" : -1231079552,
+          "placeId" : "ChIJMcI_DHBxhlQRi3u5TX4LwkI",
+          "locationConfidence" : 15.74926
+        }, {
+          "latitudeE7" : 492805054,
+          "longitudeE7" : -1231077993,
+          "placeId" : "ChIJuy0TuntxhlQRmGN6CySKq5k",
+          "locationConfidence" : 15.544474
+        }, {
+          "latitudeE7" : 492799406,
+          "longitudeE7" : -1231087145,
+          "placeId" : "ChIJrRJmv3txhlQR3MkGD9d3OPA",
+          "locationConfidence" : 0.8614212
+        }, {
+          "latitudeE7" : 492799520,
+          "longitudeE7" : -1231079214,
+          "placeId" : "ChIJh1UbO9J9C0ER6PpTejlGFag",
+          "locationConfidence" : 0.8084157
+        }, {
+          "latitudeE7" : 492800768,
+          "longitudeE7" : -1231084166,
+          "placeId" : "ChIJ49OS0zFxhlQReGQTd3O9aTc",
+          "locationConfidence" : 0.47765592
+        } ],
+        "editConfirmationStatus" : "NOT_CONFIRMED"
+      }, {
+        "location" : {
+          "latitudeE7" : 492805054,
+          "longitudeE7" : -1231077993,
+          "placeId" : "ChIJuy0TuntxhlQRmGN6CySKq5k",
+          "address" : "181 Keefer Pl #230\nVancouver, BC V6B 6C1\nCanada",
+          "name" : "Lifemark Physiotherapy Keefer Place",
+          "sourceInfo" : {
+            "deviceTag" : 2017462186
+          },
+          "locationConfidence" : 45.087997
+        },
+        "duration" : {
+          "startTimestampMs" : "1586394615068",
+          "endTimestampMs" : "1586395349086"
+        },
+        "placeConfidence" : "MEDIUM_CONFIDENCE",
+        "centerLatE7" : 492803367,
+        "centerLngE7" : -1231078107,
+        "visitConfidence" : 87,
+        "otherCandidateLocations" : [ {
+          "latitudeE7" : 492801114,
+          "longitudeE7" : -1231079552,
+          "placeId" : "ChIJMcI_DHBxhlQRi3u5TX4LwkI",
+          "locationConfidence" : 16.525274
+        }, {
+          "latitudeE7" : 492799334,
+          "longitudeE7" : -1231081955,
+          "placeId" : "ChIJY_YvuHtxhlQROmgdZbhFxXc",
+          "locationConfidence" : 15.196569
+        }, {
+          "latitudeE7" : 492800680,
+          "longitudeE7" : -1231082620,
+          "placeId" : "ChIJJ_ZWt3txhlQRo3fINQAZJ5A",
+          "locationConfidence" : 3.553735
+        }, {
+          "latitudeE7" : 492801861,
+          "longitudeE7" : -1231079164,
+          "placeId" : "ChIJZ_YWuXtxhlQRQiskrnHs_zM",
+          "locationConfidence" : 0.8684575
+        }, {
+          "latitudeE7" : 492803185,
+          "longitudeE7" : -1231074495,
+          "placeId" : "ChIJgyGKQaVxhlQRNh3FazOQ3fc",
+          "locationConfidence" : 0.56152445
+        } ],
+        "editConfirmationStatus" : "NOT_CONFIRMED"
+      }, {
+        "location" : {
+          "latitudeE7" : 492799334,
+          "longitudeE7" : -1231081955,
+          "placeId" : "ChIJY_YvuHtxhlQROmgdZbhFxXc",
+          "address" : "179 Keefer Pl\nVancouver, BC V6B 2L2\nCanada",
+          "name" : "T&T Supermarket",
+          "sourceInfo" : {
+            "deviceTag" : 2017462186
+          },
+          "locationConfidence" : 56.37873
+        },
+        "duration" : {
+          "startTimestampMs" : "1586395470197",
+          "endTimestampMs" : "1586395592056"
+        },
+        "placeConfidence" : "MEDIUM_CONFIDENCE",
+        "centerLatE7" : 492801283,
+        "centerLngE7" : -1231080259,
+        "visitConfidence" : 87,
+        "otherCandidateLocations" : [ {
+          "latitudeE7" : 492801114,
+          "longitudeE7" : -1231079552,
+          "placeId" : "ChIJMcI_DHBxhlQRi3u5TX4LwkI",
+          "locationConfidence" : 17.441055
+        }, {
+          "latitudeE7" : 492805054,
+          "longitudeE7" : -1231077993,
+          "placeId" : "ChIJuy0TuntxhlQRmGN6CySKq5k",
+          "locationConfidence" : 8.442142
+        }, {
+          "latitudeE7" : 492799520,
+          "longitudeE7" : -1231079214,
+          "placeId" : "ChIJh1UbO9J9C0ER6PpTejlGFag",
+          "locationConfidence" : 1.7218951
+        }, {
+          "latitudeE7" : 492799406,
+          "longitudeE7" : -1231087145,
+          "placeId" : "ChIJrRJmv3txhlQR3MkGD9d3OPA",
+          "locationConfidence" : 1.2879755
+        }, {
+          "latitudeE7" : 492800680,
+          "longitudeE7" : -1231082620,
+          "placeId" : "ChIJJ_ZWt3txhlQRo3fINQAZJ5A",
+          "locationConfidence" : 1.0898811
+        }, {
+          "latitudeE7" : 492800768,
+          "longitudeE7" : -1231084166,
+          "placeId" : "ChIJ49OS0zFxhlQReGQTd3O9aTc",
+          "locationConfidence" : 0.9156335
+        } ],
+        "editConfirmationStatus" : "NOT_CONFIRMED"
+      } ],
+      "centerLatE7" : 492802354,
+      "centerLngE7" : -1231079478,
+      "visitConfidence" : 87,
+      "otherCandidateLocations" : [ {
+        "latitudeE7" : 492786522,
+        "longitudeE7" : -1231096954,
+        "placeId" : "ChIJsZ6YdHtxhlQRpPu8q2PUa-g",
+        "locationConfidence" : 1.0076138
+      }, {
+        "latitudeE7" : 492795915,
+        "longitudeE7" : -1231097731,
+        "placeId" : "ChIJDRJikHtxhlQRC36gLHt3sJ8",
+        "locationConfidence" : 0.4865207
+      }, {
+        "latitudeE7" : 492801271,
+        "longitudeE7" : -1231099350,
+        "placeId" : "ChIJq2tI6HtxhlQRBaKUv59cS9E",
+        "locationConfidence" : 0.12606245
+      }, {
+        "latitudeE7" : 492808470,
+        "longitudeE7" : -1231078336,
+        "placeId" : "ChIJhcTSzHtxhlQR0vXh32RpbvI",
+        "locationConfidence" : 0.07425842
+      } ],
+      "editConfirmationStatus" : "NOT_CONFIRMED"
+    }
+  }, {
+    "placeVisit" : {
+      "location" : {
+        "latitudeE7" : 492801271,
+        "longitudeE7" : -1231099350,
+        "placeId" : "ChIJq2tI6HtxhlQRBaKUv59cS9E",
+        "address" : "568 Beatty St\nVancouver, BC V6B 2L3\nCanada",
+        "name" : "Chambar Restaurant",
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        },
+        "locationConfidence" : 72.64695
+      },
+      "duration" : {
+        "startTimestampMs" : "1586395714068",
+        "endTimestampMs" : "1586396822319"
+      },
+      "placeConfidence" : "MEDIUM_CONFIDENCE",
+      "centerLatE7" : 492800860,
+      "centerLngE7" : -1231101080,
+      "visitConfidence" : 84,
+      "otherCandidateLocations" : [ {
+        "latitudeE7" : 492795915,
+        "longitudeE7" : -1231097731,
+        "placeId" : "ChIJDRJikHtxhlQRC36gLHt3sJ8",
+        "locationConfidence" : 12.123793
+      }, {
+        "latitudeE7" : 492802260,
+        "longitudeE7" : -1231103190,
+        "placeId" : "ChIJ6Y718HtxhlQR7vrOVOD5cBc",
+        "locationConfidence" : 7.549471
+      }, {
+        "latitudeE7" : 492786522,
+        "longitudeE7" : -1231096954,
+        "placeId" : "ChIJsZ6YdHtxhlQRpPu8q2PUa-g",
+        "locationConfidence" : 4.566703
+      }, {
+        "latitudeE7" : 492799334,
+        "longitudeE7" : -1231081955,
+        "placeId" : "ChIJY_YvuHtxhlQROmgdZbhFxXc",
+        "locationConfidence" : 1.9573463
+      } ],
+      "editConfirmationStatus" : "NOT_CONFIRMED"
+    }
+  }, {
+    "activitySegment" : {
+      "startLocation" : {
+        "latitudeE7" : 492799447,
+        "longitudeE7" : -1231109802,
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        }
+      },
+      "endLocation" : {
+        "latitudeE7" : 492788300,
+        "longitudeE7" : -1231139678,
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        }
+      },
+      "duration" : {
+        "startTimestampMs" : "1586396822319",
+        "endTimestampMs" : "1586397066090"
+      },
+      "distance" : 253,
+      "activityType" : "WALKING",
+      "confidence" : "HIGH",
+      "activities" : [ {
+        "activityType" : "WALKING",
+        "probability" : 95.52121162414551
+      }, {
+        "activityType" : "STILL",
+        "probability" : 1.5964888036251068
+      }, {
+        "activityType" : "IN_PASSENGER_VEHICLE",
+        "probability" : 1.0464703664183617
+      }, {
+        "activityType" : "IN_BUS",
+        "probability" : 0.5828063003718853
+      }, {
+        "activityType" : "CYCLING",
+        "probability" : 0.4939451813697815
+      }, {
+        "activityType" : "RUNNING",
+        "probability" : 0.25612972676754
+      }, {
+        "activityType" : "IN_TRAIN",
+        "probability" : 0.22192380856722593
+      }, {
+        "activityType" : "IN_SUBWAY",
+        "probability" : 0.12086739297956228
+      }, {
+        "activityType" : "MOTORCYCLING",
+        "probability" : 0.11248743394389749
+      }, {
+        "activityType" : "IN_FERRY",
+        "probability" : 0.024752409080974758
+      }, {
+        "activityType" : "FLYING",
+        "probability" : 0.01564284902997315
+      }, {
+        "activityType" : "IN_TRAM",
+        "probability" : 0.005315150337992236
+      }, {
+        "activityType" : "SAILING",
+        "probability" : 8.497232556692325E-4
+      }, {
+        "activityType" : "IN_VEHICLE",
+        "probability" : 6.047234819561709E-4
+      }, {
+        "activityType" : "SKIING",
+        "probability" : 4.99203042636509E-4
+      } ],
+      "waypointPath" : {
+        "waypoints" : [ {
+          "latE7" : 492799949,
+          "lngE7" : -1231109008
+        }, {
+          "latE7" : 492790641,
+          "lngE7" : -1231135864
+        }, {
+          "latE7" : 492788238,
+          "lngE7" : -1231139526
+        } ]
+      }
+    }
+  }, {
+    "placeVisit" : {
+      "location" : {
+        "latitudeE7" : 492785529,
+        "longitudeE7" : -1231150401,
+        "placeId" : "ChIJn3YYzX1xhlQRljM1sgzphVw",
+        "address" : "233 Robson St\nVancouver, BC V6B 2M1\nCanada",
+        "name" : "233 Robson St",
+        "sourceInfo" : {
+          "deviceTag" : 2017462186
+        },
+        "locationConfidence" : 98.03955
+      },
+      "duration" : {
+        "startTimestampMs" : "1586658415660",
+        "endTimestampMs" : "1587005617483"
+      },
+      "placeConfidence" : "HIGH_CONFIDENCE",
+      "centerLatE7" : 492784633,
+      "centerLngE7" : -1231151875,
+      "visitConfidence" : 95,
+      "otherCandidateLocations" : [ {
+        "latitudeE7" : 492772139,
+        "longitudeE7" : -1231178657,
+        "placeId" : "ChIJO3hCPdZzhlQR798oCIPVhsA",
+        "locationConfidence" : 0.77969867
+      }, {
+        "latitudeE7" : 492765884,
+        "longitudeE7" : -1231183090,
+        "placeId" : "ChIJbZAQ9n1xhlQR46281vnfrGM",
+        "locationConfidence" : 0.22898819
+      }, {
+        "latitudeE7" : 492783445,
+        "longitudeE7" : -1231154338,
+        "placeId" : "ChIJDVK6zn1xhlQRCAFIyxUU5_8",
+        "locationConfidence" : 0.21439353
+      }, {
+        "latitudeE7" : 492804825,
+        "longitudeE7" : -1231169216,
+        "placeId" : "ChIJ1ZIj9H5xhlQRezRqrA84yHQ",
+        "locationConfidence" : 0.18840685
+      } ],
+      "editConfirmationStatus" : "NOT_CONFIRMED"
+    }
+  } ]
+}
