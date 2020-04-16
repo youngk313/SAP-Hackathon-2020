@@ -13,6 +13,7 @@ import SignUp from './SignUp';
 import SignIn from './SignIn';
 import UserProvider from '../providers/UserProvider';
 
+import Fileuploader from "./Fileuploader";
 
 const App = () => {
 	return (
@@ -38,6 +39,3 @@ const App = () => {
 }
 
 export default App;
-
-
-
