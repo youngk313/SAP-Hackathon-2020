@@ -96,7 +96,7 @@ const FileUploader = () => {
 
 						console.log(location);
 						console.log(hashKey);
-						database.ref('/users/' + "userid" + "/" + hashKey).update(location);
+						database.ref('/users/' + user.uid + "/" + hashKey).update(location);
 
 						// if the upload has a corona flag need to update corona visit count and push
 						if(hasCorona) {
