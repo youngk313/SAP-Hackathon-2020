@@ -27,6 +27,7 @@ import Map from './Map';
 // Authentication
 import SignUp from './SignUp';
 import SignIn from './SignIn';
+import Infected from './Infected';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -121,9 +122,7 @@ export const App = () => {
 			<Grid item xs = {2} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
 			<Grid item xs ={2}></Grid>
 			<Grid item xs={4} style ={{paddingLeft:"40px"}} > <Charts/></Grid>
-
-
-
+			<Grid item xs={6} style ={{margin:'auto'}} > <Infected/></Grid>
 		</Grid>
 		</main>
 		</userContext.Provider>
