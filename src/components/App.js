@@ -16,7 +16,7 @@ import SideBar from './SideBar';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 
-const App = () => {
+export const App = () => {
 	const {initializing, user} = useAuth();
 
 	return (
