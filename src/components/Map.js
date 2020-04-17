@@ -44,7 +44,7 @@ class SimpleMap extends Component {
 
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '75vh', width: '100%' }}>
+      <div style={{ height: '550px', width: '100%' }}>
         <GoogleMapReact
           ref={(el) => {
             console.log(el);

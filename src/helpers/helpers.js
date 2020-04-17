@@ -59,7 +59,7 @@ export const filterPlaceVisited = (data) =>{
         {
           "lat":element.centerLatE7/10000000,
           "lng":element.centerLngE7/10000000,
-          "weight": 15 * element.count
+          "weight": 20 * element.count
         });
     }
   });

@@ -8,17 +8,20 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
-import Icon from '@material-ui/core/Icon';
+import Container from '@material-ui/core/Container';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+import WalkingIcon from '../img/walking.png';
+import BackupIcon from '@material-ui/icons/Backup';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-
 
 import Charts from './Charts';
 import UserStatusCard from './UserStatusCard';
 import Fileuploader from "./Fileuploader";
 import ProfilePage from './ProfilePage';
-import SideBar from './SideBar';
 import Map from './Map';
 
 // Authentication
@@ -59,63 +62,70 @@ export const App = () => {
 
 	return (
 		<userContext.Provider value={{ user }}>
+			<nav className={classes.drawer}>
+		<Drawer
+			className={classes.drawer}
+			variant="permanent"
+			classes={{
+			paper: classes.drawerPaper,
+			}}
+			anchor="left"
+		>
+			<div className={classes.toolbar} />
+			<Container maxWidth = "sm">
+                   <img src={WalkingIcon} style={{width:"50px", display:"inline"}}/><p style={{ fontSize:"16pt", display:"inline-block", transform: "translateY(-14px)"}}>Retrace</p>
 
+            </Container>
+			<Divider />
+			<List>
+				<ListItem button key={"Dashboard"}>
+				<ListItemIcon>
+					<DashboardIcon style={{color:"white"}}/>
+				</ListItemIcon>
+				<ListItemText primary="Dashboard" />
+				</ListItem>
+				<ListItem button key={"Upload Data"}>
+				<ListItemIcon>
+					<BackupIcon style={{color:"white"}}/>
+				</ListItemIcon>
+				<ListItemText primary="Upload Data" />
+				</ListItem>
+				<ListItem button key={"Calendar"}>
+				<ListItemIcon>
+					<CalendarTodayIcon style={{color:"white"}}/>
+				</ListItemIcon>
+				<ListItemText primary="Calendar" />
+				</ListItem>
+				<ListItem button key={"News"}>
+				<ListItemIcon>
+					<ChatBubbleIcon style={{color:"white"}}/>
+				</ListItemIcon>
+				<ListItemText primary="News" />
+				</ListItem>
+				<Router>
+					<Route exact path='/signIn' render= {() => <SignIn/> }/>
+					<Route exact path='/signUp' render= {() => <SignUp/> }/>
+					<Route exact path='/' render= {() => <ProfilePage/> }/>
+			    </Router>
+			</List>
+		</Drawer>
+		</nav>
+		<main>
+          <Grid container maxWidth="md"spacing ={1}>
+			<Grid item xs={1}>
 
-          <Grid container>
-			<Grid item xs={2}>
-				<Drawer
-					className={classes.drawer}
-					variant="permanent"
-					classes={{
-					paper: classes.drawerPaper,
-					}}
-					anchor="left"
-				>
-					<div className={classes.toolbar} />
-					<Divider />
-					<List>
-						<ListItem button key={"Dashboard"}>
-						<ListItemIcon>
-				   		</ListItemIcon>
-						<ListItemText primary="Dashboard" />
-						</ListItem>
-						<ListItem button key={"Upload Data"}>
-						<ListItemIcon>
-				   		</ListItemIcon>
-						<ListItemText primary="Upload Data" />
-						</ListItem>
-						<ListItem button key={"Calendar"}>
-						<ListItemIcon>
-				   		</ListItemIcon>
-						<ListItemText primary="Calendar" />
-						</ListItem>
-						<ListItem button key={"News"}>
-						<ListItemIcon>
-				   		</ListItemIcon>
-						<ListItemText primary="News" />
-						</ListItem>
-
-					</List>
-				</Drawer>
 			</Grid>
-            <Grid item xs={5} > <Charts/></Grid>
-            <Grid item xs ={7} > <Map> </Map> </Grid>
-            <Grid item xs ={5}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
-            <Grid item xs ={7}> sdfsdfsdfsdfdsfsdfdsfsdfsdf </Grid>
+			<Grid item xs ={4}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
+            <Grid item xs ={6} style = {{paddingTop:"40px"}}> <Map > </Map> </Grid>
+			<Grid item xs ={2}></Grid>
+			<Grid item xs = {2} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
+			<Grid item xs ={2}></Grid>
+			<Grid item xs={4} style ={{paddingLeft:"40px"}} > <Charts/></Grid>
+
+
+
 		</Grid>
-		<div className="App">
-			<Fileuploader/>
-      <div class="container">
-
-      </div>
-    </div>
-
-
-			<Router>
-				<Route exact path='/signIn' render= {() => <SignIn/> }/>
-				<Route exact path='/signUp' render= {() => <SignUp/> }/>
-				<Route exact path='/' render= {() => <ProfilePage/> }/>
-			</Router>
+		</main>
 		</userContext.Provider>
 	);
 };
