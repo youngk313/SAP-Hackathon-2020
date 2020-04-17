@@ -15,28 +15,23 @@ export const getNDaysSinceDate = (day, n) => {
 // TODO (GETS UR USER ID AND MATCHES UR ID WITH ALL INFECTED PLACES YOU HAVE BEEN TO)
 // RETURNS AN ARRAY OF KEYS WHICH ARE THE INFECTED LOCATIONS AND DATES
 export const getInfectedPlaces = async (userId) => {
-    await database.ref("/users/" + userId).once("value").then(
-        function(snapshot) {
-            let locations = snapshot.val();
-            let keys = Object.keys(locations);
-            let infectedKeys = Array(0);
-            console.log(keys);
+    const snapshot = await database.ref("/users/" + userId).once("value");
 
-            // this is gross i know but bear with me its a proof of concept Xd
-            for(let i = 0; i < keys.length; i++) {
-                database.ref("/locations/" + keys[i]).once("value").then(
-                    function(ss) {
-                        if(ss.val() != null) {
-                            infectedKeys.append(keys[i]);
-                        }
-                    }
-                )
-            }
+    let locations = snapshot.val();
+    let keys = Object.keys(locations);
+    let infectedKeys = Array(0);
+    console.log(keys);
 
-            console.log(infectedKeys);
-            return infectedKeys;
-        });
-}
+    // this is gross i know but bear with me its a proof of concept Xd
+    for(let i = 0; i < keys.length; i++) {
+        const locationSnapshot = await database.ref("/locations/" + keys[i]).once("value");
+        if(locationSnapshot.val() != null) {
+            infectedKeys.append(keys[i]);
+        }
+    }
+    console.log(infectedKeys);
+    return infectedKeys;
+};
 
 // GETS THE COVID DATA BASED ON A KEY (HASHKEY)
 // RETURNS AN OBJECT LIKE YOU SEE IN FIREBASE AFTER YOU CLICK "+" ON THE KEY

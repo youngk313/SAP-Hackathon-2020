@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Data from '../locations/2020_MARCH.json'
-import {filterPlaceVisited, getAllCovidData} from '../helpers/helpers';
+import {filterPlaceVisited, getAllCovidData, getInfectedPlaces} from '../helpers/helpers';
 
 class SimpleMap extends Component {
 
