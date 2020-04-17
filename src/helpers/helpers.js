@@ -12,7 +12,8 @@ export const filterPlaceVisited = (data) =>{
       cleanData.push(
         {
           "lat":element.placeVisit.location.latitudeE7/10000000, 
-          "lng":element.placeVisit.location.longitudeE7/10000000
+          "lng":element.placeVisit.location.longitudeE7/10000000,
+          "weight": 15
         });
     }
   });

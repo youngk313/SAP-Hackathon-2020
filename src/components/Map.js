@@ -3,8 +3,6 @@ import GoogleMapReact from 'google-map-react';
 import Data from '../locations/2020_MARCH.json'
 import {filterPlaceVisited} from '../helpers/helpers';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
 class SimpleMap extends Component {
 
   constructor(props){
@@ -19,7 +17,7 @@ class SimpleMap extends Component {
       lat: 49.2827,
       lng: -123.1207
     },
-    zoom: 11
+    zoom: 15
   };
 
   componentDidMount() {
@@ -32,7 +30,7 @@ class SimpleMap extends Component {
     const heatMapData = filterPlaceVisited(Data.timelineObjects);
     res.positions = heatMapData;
     res.options = {
-      radius: 20,   
+      radius: 25,   
       opacity: 0.5,
     };
     return(res);
