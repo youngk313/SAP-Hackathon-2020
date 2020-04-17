@@ -1,4 +1,4 @@
-import { getLastNthDay } from '../helpers'
+import { getLastNthDay } from '../helpers/helpers'
 
 const BASE_URL = 'https://sap-hackathon-4ddbd.firebaseio.com';
 

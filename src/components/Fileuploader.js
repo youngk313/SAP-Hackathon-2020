@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Dropzone from 'react-dropzone';
 import Card from "@material-ui/core/Card";
 
-import { UserContext } from '../providers/UserProvider';
+import { useSession } from './App';
 
 export default class Fileuploader extends React.Component {
 
 	fileDropHandler = acceptedFiles => {
-		const user = useContext(UserContext);
+		const user = useSession();
 	};
 
     render() {
