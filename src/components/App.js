@@ -19,6 +19,10 @@ const App = () => {
 	return (
 		<UserProvider>
 		<div className="App">
+				<Grid container spacing={1}>
+					<Fileuploader/>
+				</Grid>
+
 				<Grid container spacing ={2}>
 					<Grid item xs = {12}>
 
