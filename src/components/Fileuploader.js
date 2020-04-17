@@ -32,7 +32,6 @@ const FileUploader = () => {
 
 	const confirmButtonHandler = async (event) => {
 		event.stopPropagation();
-
 		console.log(progress);
 		console.log(filesBuffer);
 
@@ -100,7 +99,9 @@ const FileUploader = () => {
 										database.ref("/locations/" + hashKey).update(location);
 										database.ref("/locations/" + hashKey).update({count: 1});
 									} else {
-										database.ref("/locations").once(hashKey).update({count: snapshot.val().count++});
+									  let newCount = snapshot.val().count;
+									  newCount++;
+										database.ref("/locations/" + hashKey).update({count: newCount});
 									}
 								}
 							)
