@@ -50,7 +50,7 @@ class UserStatusCard extends React.Component{
   createButtons(response){
     if(response[0].button_text2 !== ""){
       return(
-        <Fragment>      
+        <Fragment>
       <Button variant = "contained" outlined="true" style = {buttonStyle} p={10}> {response[0].button_text} </Button>
       <Button variant = "contained" outlined="true" style = {buttonStyle} p={10}> {response[0].button_text2} </Button>
         </Fragment>);
@@ -63,7 +63,7 @@ class UserStatusCard extends React.Component{
     return(
       <Grid alignItems="center" justify="center" spacing={0} item xs={3}>
         <Card style={{ width: '25rem'}}>
-          <CardContent> 
+          <CardContent>
           <Typography> {this.state.healthStatus} </Typography> <br/>
           <Typography align = 'left'> What should I do? </Typography> <br/>
           <Typography align = 'left'> {response[0].tip} </Typography> <br/>

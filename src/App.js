@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <UserStatusCard healthStatus='healthy'></UserStatusCard> 
+        <UserStatusCard healthStatus='healthy'></UserStatusCard>
         <a
           className="App-link"
           href="https://reactjs.org"

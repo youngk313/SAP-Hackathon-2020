@@ -79,4 +79,3 @@ export const useAuth = () => {
 	return state;
 };
 
-export default App;
