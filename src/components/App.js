@@ -102,7 +102,11 @@ export const App = () => {
 				</ListItemIcon>
 				<ListItemText primary="News" />
 				</ListItem>
-
+				<Router>
+					<Route exact path='/signIn' render= {() => <SignIn/> }/>
+					<Route exact path='/signUp' render= {() => <SignUp/> }/>
+					<Route exact path='/' render= {() => <ProfilePage/> }/>
+			    </Router>
 			</List>
 		</Drawer>
 		</nav>
@@ -122,11 +126,6 @@ export const App = () => {
 
 		</Grid>
 		</main>
-			<Router>
-				<Route exact path='/signIn' render= {() => <SignIn/> }/>
-				<Route exact path='/signUp' render= {() => <SignUp/> }/>
-				<Route exact path='/' render= {() => <ProfilePage/> }/>
-			</Router>
 		</userContext.Provider>
 	);
 };
