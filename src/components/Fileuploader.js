@@ -5,7 +5,9 @@ import "./Fileuploader.css"
 import { database } from "../firebase";
 import { getNDaysSinceDate} from "../helpers/helpers"
 import { useSession } from './App';
+import Modal from '@material-ui/core/Modal';
 import DatePicker from "react-datepicker/es";
+import Button from "@material-ui/core/Button";
 import "../../node_modules/react-datepicker/src/stylesheets/datepicker.scss";
 
 
@@ -15,6 +17,7 @@ const FileUploader = () => {
 	const [hasCorona, setHasCorona] = useState(false);
 	const [startDate, setStartDate] = useState(new Date());
 	const [isDisabled, setisDisabled] = useState(false);
+	const [open, setOpen] = useState(false);
 
 	const user = useSession();
 	const displayFiles = filesBuffer.map(file => (
@@ -136,6 +139,7 @@ const FileUploader = () => {
 	}
 
 	const coronaToggleHandler = (event) => {
+		setOpen(true);
 		event.stopPropagation();
 		setHasCorona(!hasCorona);
 		setisDisabled(true);
@@ -144,24 +148,24 @@ const FileUploader = () => {
 	}
 
 	return(
-			<Card style={{width:"50%"}}>
+			<Card style={{width:"80%", height: "200px"}}>
 				<Dropzone accept={'application/json'} onDrop={fileDropHandler}>
 					{({getRootProps, getInputProps}) => (
 							<section>
 								<div {...getRootProps()}>
 									<input {...getInputProps()} />
-									<p>Drag 'n' drop some files here, or click to select files</p>
+									<p>To find out more COVID-19 information in your area, please upload a file.</p>
 								</div>
 							</section>
 					)}
 				</Dropzone>
 				<h4>Files</h4>
 				<ul>{displayFiles}</ul>
-				<button className={"confirmButton"} onClick={(event) => confirmButtonHandler(event)}>Confirm</button>
-				<button className={hasCorona ? "coronaToggleOn" : "coronaToggleOff"} disabled={isDisabled} onClick={(event) => coronaToggleHandler(event)}>{hasCorona ? "Sick" : "Healthy"}</button>
+				<Button color ="primary" variant="contained" className={"confirmButton"} onClick={(event) => confirmButtonHandler(event)}>Confirm</Button>
+				<Button color ="primary" variant="contained" className={hasCorona ? "coronaToggleOn" : "coronaToggleOff"} disabled={isDisabled} onClick={(event) => coronaToggleHandler(event)}>{hasCorona ? "Sick" : "Healthy"}</Button>
 				<aside id={"calendar"} className={hasCorona ? "show" : "hide"}>
-					<h4>PLEASE SELECT THE DATE YOU STARTED SHOWING SYMPTOMS</h4>
-					<DatePicker selected={startDate} onChange={(event) => datePickHandler(event)}/>
+					<h4>Please select the date you started showing symptoms</h4>
+						<DatePicker selected={startDate} onChange={(event) => datePickHandler(event)}/>
 				</aside>
 			</Card>
 	);

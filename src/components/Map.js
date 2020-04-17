@@ -21,7 +21,6 @@ class SimpleMap extends Component {
   };
 
   componentDidMount() {
-    console.log("mounted");
     this.setState({ heatMap: this.setUpHeatMapData()});
   }
 
@@ -30,7 +29,7 @@ class SimpleMap extends Component {
     const heatMapData = filterPlaceVisited(Data.timelineObjects);
     res.positions = heatMapData;
     res.options = {
-      radius: 25,   
+      radius: 25,
       opacity: 0.5,
     };
     return(res);
@@ -42,8 +41,8 @@ class SimpleMap extends Component {
 
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '75vh', width: '100%' }}>
-        <GoogleMapReact  
+      <div style={{ height: '550px', width: '90%' }}>
+        <GoogleMapReact
           ref={(el) => {
             console.log(el);
             this._googleMap = el;

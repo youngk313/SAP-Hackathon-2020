@@ -1,7 +1,6 @@
 .confirmButton {
-  width: 100px;
-  height: 100px;
   margin: auto;
+  margin-right: 10px;
 }
 
 .hide {
@@ -11,21 +10,15 @@
 }
 
 .coronaToggleOn {
-  width: 100px;
-  height: 100px;
   margin: auto;
-  background-color: greenyellow;
+  background-color:  #1976d2;
 }
 
 .coronaToggleOff {
-  width: 100px;
-  height: 100px;
   margin: auto;
   background-color: turquoise;
 }
 
 .hasCorona {
-  width: 100px;
-  height: 100px;
   margin: auto;
 }
