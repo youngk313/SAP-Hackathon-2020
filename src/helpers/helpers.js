@@ -14,8 +14,8 @@ export const getNDaysSinceDate = (day, n) => {
 
 // TODO (GETS UR USER ID AND MATCHES UR ID WITH ALL INFECTED PLACES YOU HAVE BEEN TO)
 // RETURNS AN ARRAY OF KEYS WHICH ARE THE INFECTED LOCATIONS AND DATES
-export const getInfectedPlaces = async () => {
-    await database.ref("/users/" + "userid").once("value").then(
+export const getInfectedPlaces = async (userId) => {
+    await database.ref("/users/" + userId).once("value").then(
         function(snapshot) {
             let locations = snapshot.val();
             let keys = Object.keys(locations);
@@ -50,24 +50,21 @@ export const getCovidData = (hashkey) => {
 
 // RETURNS ALL THE KEYS OF COVID AREAS
 // probably for uses in graphs
-export const getAllCovidDataKeys = () => {
-    database.ref("/locations").once("value").then(
-        function(snapshot) {
-            return Object.keys(snapshot.val());
-        });
+export const getAllCovidData = async () => {
+  const snapshot = await database.ref("/locations").once("value");
+  return snapshot.val();
 };
 
 
 export const filterPlaceVisited = (data) =>{
-  console.log(data);
   let cleanData = [];
-  data.forEach(element => {
-    if(element.placeVisit){
+  (Object.values(data) || {}).forEach(element => {
+    if(element.location){
       cleanData.push(
         {
-          "lat":element.placeVisit.location.latitudeE7/10000000, 
-          "lng":element.placeVisit.location.longitudeE7/10000000,
-          "weight": 15
+          "lat":element.centerLatE7/10000000,
+          "lng":element.centerLngE7/10000000,
+          "weight": 15 * element.count
         });
     }
   });

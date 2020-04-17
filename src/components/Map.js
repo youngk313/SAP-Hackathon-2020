@@ -8,7 +8,7 @@ class SimpleMap extends Component {
   constructor(props){
     super(props);
     this.state = {
-      heatMap: []
+      heatMap: {}
     }
   }
 
@@ -20,30 +20,32 @@ class SimpleMap extends Component {
     zoom: 15
   };
 
-  componentDidMount() {
-    console.log("mounted");
-    this.setState({ heatMap: this.setUpHeatMapData()});
+  async componentDidMount() {
+    const data = await this.setUpHeatMapData();
+    this.setState({ heatMap: data});
   }
 
   setUpHeatMapData(){
     let res = {};
-    const heatMapData = filterPlaceVisited(Data.timelineObjects);
+    const data = await getAllCovidData();
+    const heatMapData = filterPlaceVisited(data);
     res.positions = heatMapData;
     res.options = {
-      radius: 25,   
+      radius: 25,
       opacity: 0.5,
     };
     return(res);
   }
 
-
   render() {
-    const heatMapData = this.setUpHeatMapData();
+    if (!this.state.heatMap.positions) {
+      return <div>Loading</div>
+    }
 
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '75vh', width: '100%' }}>
-        <GoogleMapReact  
+        <GoogleMapReact
           ref={(el) => {
             console.log(el);
             this._googleMap = el;
@@ -52,7 +54,7 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           heatmapLibrary={true}
-          heatmap={heatMapData}
+          heatmap={this.state.heatMap}
         >
         </GoogleMapReact>
       </div>
