@@ -49,7 +49,7 @@ const Infected = () => {
                     </TableHead>
                     <TableBody>
                         {infectedPlaces.length > 0 ? infectedPlaces.map((place) => (
-                        <TableRow key={place.address}>
+                        <TableRow key={place.from + place.to}>
                             <TableCell component="th" scope="row">
                                 {place.address}
                             </TableCell>
