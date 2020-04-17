@@ -31,6 +31,7 @@ class SimpleMap extends Component {
     const heatMapData = filterPlaceVisited(data);
     res.positions = heatMapData;
     res.options = {
+      maxIntensity: 200,
       radius: 25,
       opacity: 0.5,
     };
