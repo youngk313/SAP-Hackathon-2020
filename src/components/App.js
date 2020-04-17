@@ -19,6 +19,7 @@ import UserStatusCard from './UserStatusCard';
 import Fileuploader from "./Fileuploader";
 import ProfilePage from './ProfilePage';
 import SideBar from './SideBar';
+import Map from './Map';
 
 // Authentication
 import SignUp from './SignUp';
@@ -98,7 +99,7 @@ export const App = () => {
 				</Drawer>
 			</Grid>
             <Grid item xs={5} > <Charts/></Grid>
-            <Grid item xs ={7} > sdfsdfsdfsdfdsfsdfdsfsdfsdf </Grid>
+            <Grid item xs ={7} > <Map> </Map> </Grid>
             <Grid item xs ={5}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
             <Grid item xs ={7}> sdfsdfsdfsdfdsfsdfdsfsdfsdf </Grid>
 		</Grid>
