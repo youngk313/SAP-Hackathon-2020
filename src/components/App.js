@@ -1,28 +1,29 @@
-// Authentication
-import SignUp from './SignUp';
-import SignIn from './SignIn';
-import Fileuploader from "./Fileuploader";
-import ProfilePage from './ProfilePage';
 import React from 'react';
 import '../App.css';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import {auth} from '../firebase';
+
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+
 import Charts from './Charts';
 import UserStatusCard from './UserStatusCard';
-import Container from '@material-ui/core/Container';
+import Fileuploader from "./Fileuploader";
+import ProfilePage from './ProfilePage';
 import SideBar from './SideBar';
-export default function App() {
 
+// Authentication
+import SignUp from './SignUp';
+import SignIn from './SignIn';
 
 const App = () => {
 	const {initializing, user} = useAuth();
-  
+
 	return (
 		<userContext.Provider value={{ user }}>
     <div className="App">
       <div class="container">
-        <SideBar></SideBar> 
+        <SideBar></SideBar>
           <div class = "grid-container">
             <div class="left-box"> sdfsdfsdfdfsdfsdfsdfs sdfsdfdsfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfsdfsdfs sdfsdfdsfsdf</div>
             <div class="right-box"> sdfsdfsdfsdfdsfsdfdsfsdfsdf </div>
@@ -42,7 +43,7 @@ const App = () => {
 
       {/* <UserStatusCard healthStatus='healthy'></UserStatusCard>  */}
     </div>
-  
+
 
 			<Router>
 				<Route exact path='/signIn' render= {() => <SignIn/> }/>
@@ -60,7 +61,7 @@ const userContext = React.createContext({
 export const useSession = () => {
 	const { user } = React.useContext(userContext)
 	return user
-}
+};
 
 export const useAuth = () => {
 	const [state, setState] = React.useState(() => { const user = auth.currentUser; return { initializing: !user, user, } })
