@@ -119,8 +119,8 @@ export const App = () => {
 			<Grid item xs ={4}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
             <Grid item xs ={6} style = {{paddingTop:"40px"}}> <Map > </Map> </Grid>
 			<Grid item xs ={2}></Grid>
-			<Grid item xs = {2} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
-			<Grid item xs ={2}></Grid>
+			<Grid item xs = {3} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
+			<Grid item xs ={1}></Grid>
 			<Grid item xs={4} style ={{paddingLeft:"40px"}} > <Charts/></Grid>
 			<Grid item xs={6} style ={{margin:'auto'}} > <Infected/></Grid>
 		</Grid>
