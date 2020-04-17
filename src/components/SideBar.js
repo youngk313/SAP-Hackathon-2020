@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
- 
+
 const SidebarContainer = styled.div`
         height: 100vh;
         width: 320px;
@@ -10,7 +10,7 @@ const SidebarContainer = styled.div`
         flex-direction: column;
         font-family: "Roboto", sans-serif;
 `;
- 
+
 const SidebarMenu = styled.ul`
         display: flex;
         align-items: left;
@@ -19,7 +19,7 @@ const SidebarMenu = styled.ul`
         width: 100%;
         padding-left: 0px;
 `;
- 
+
 const MenuLogo = styled.div`
         display: flex;
         align-items: center;
@@ -34,7 +34,7 @@ const MenuLogo = styled.div`
         padding-bottom: 20px;
         border-bottom: 1px solid #2e2e33;
 `;
- 
+
 const SidebarMenuItem = styled.li`
         display: flex;
         height: 40px;
@@ -47,12 +47,12 @@ const SidebarMenuItem = styled.li`
         cursor: pointer;
 }
 `;
- 
+
 const Icon = styled.svg`
         width: 20px;
         height: 20px;
 `;
- 
+
 const SidebarMenuItemLabel = styled.p`
         font-family: "Open Sans", sans-serif;
         color: #fff;
@@ -64,7 +64,7 @@ const SidebarMenuItemLabel = styled.p`
         margin-left: 20px;
         color: #ffffff;
 `;
- 
+
 const MenuSignOut = styled.div`
         border-top: 1px solid #2e2e33;
         font-size: 14px;
@@ -143,7 +143,7 @@ render() {
                   </Icon>
                   <SidebarMenuItemLabel>Library</SidebarMenuItemLabel>
                </SidebarMenuItem>
-               
+
           <MenuSignOut>Sign Out</MenuSignOut>
      </SidebarMenu>
 </SidebarContainer>
