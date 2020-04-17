@@ -29,12 +29,10 @@
 }
 
 .left-box{
-  background-color: red;
   grid-column: 1/5;
 }
 
 .right-box{
-  background-color: blue;
   grid-column: 5/7;
 }
 
@@ -43,7 +41,6 @@
 }
 
 .bottom-right-box{
-  background-color: purple;
   grid-column: 3/7;
 }
 @keyframes App-logo-spin {
