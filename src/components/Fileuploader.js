@@ -14,7 +14,14 @@ const FileUploader = () => {
 	const [filesBuffer, setFilesBuffer] = useState([]);
 	const [hasCorona, setHasCorona] = useState(false);
 	const [startDate, setStartDate] = useState(new Date());
+	const [isDisabled, setisDisabled] = useState(false);
+
 	const user = useSession();
+	const displayFiles = filesBuffer.map(file => (
+			<li key={file.name}>
+				{file.name} - {file.size} bytes
+			</li>
+	));
 
 	const fileDropHandler = acceptedFiles => {
 		let newArray = filesBuffer.slice();
@@ -131,6 +138,9 @@ const FileUploader = () => {
 	const coronaToggleHandler = (event) => {
 		event.stopPropagation();
 		setHasCorona(!hasCorona);
+		setisDisabled(true);
+		setTimeout(() => setisDisabled(false), 1000);
+
 	}
 
 	return(
@@ -146,8 +156,9 @@ const FileUploader = () => {
 					)}
 				</Dropzone>
 				<h4>Files</h4>
+				<ul>{displayFiles}</ul>
 				<button className={"confirmButton"} onClick={(event) => confirmButtonHandler(event)}>Confirm</button>
-				<div className={"coronaToggle"} onClick={(event) => coronaToggleHandler(event)}>{hasCorona ? "Sick" : "Healthy"}</div>
+				<button className={hasCorona ? "coronaToggleOn" : "coronaToggleOff"} disabled={isDisabled} onClick={(event) => coronaToggleHandler(event)}>{hasCorona ? "Sick" : "Healthy"}</button>
 				<aside id={"calendar"} className={hasCorona ? "show" : "hide"}>
 					<h4>PLEASE SELECT THE DATE YOU STARTED SHOWING SYMPTOMS</h4>
 					<DatePicker selected={startDate} onChange={(event) => datePickHandler(event)}/>
