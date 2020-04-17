@@ -1,4 +1,4 @@
-import firebase from "firebase/app";
+/*import firebase from "firebase/app";
 import "firebase/auth";
 
 const firebaseConfig = {
@@ -21,3 +21,4 @@ const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => {
     auth.signInWithPopup(provider);
 };
+*/
