@@ -10,11 +10,18 @@
   left: -9999px !important;
 }
 
-.coronaToggle {
+.coronaToggleOn {
   width: 100px;
   height: 100px;
   margin: auto;
-  background-color: #61dafb;
+  background-color: greenyellow;
+}
+
+.coronaToggleOff {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: turquoise;
 }
 
 .hasCorona {
