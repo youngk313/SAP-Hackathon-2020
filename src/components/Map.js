@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Data from '../locations/2020_MARCH.json'
-import {filterPlaceVisited} from '../helpers/helpers';
+import {filterPlaceVisited, getAllCovidData, getInfectedPlaces} from '../helpers/helpers';
 
 class SimpleMap extends Component {
 
@@ -25,9 +24,15 @@ class SimpleMap extends Component {
     this.setState({ heatMap: this.setUpHeatMapData()});
   }
 
-  setUpHeatMapData(){
+  async dataBuffer() {
+    return await getAllCovidData();
+  }
+
+  async setUpHeatMapData(){
     let res = {};
-    const heatMapData = filterPlaceVisited(Data.timelineObjects);
+    const data = await getAllCovidData();
+    console.log(data);
+    const heatMapData = filterPlaceVisited(data);
     res.positions = heatMapData;
     res.options = {
       radius: 25,   

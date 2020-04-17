@@ -27,7 +27,7 @@ export const getInfectedPlaces = async () => {
                 database.ref("/locations/" + keys[i]).once("value").then(
                     function(ss) {
                         if(ss.val() != null) {
-                            infectedKeys.append(keys[i]);
+                            infectedKeys.push(ss.val());
                         }
                     }
                 )
@@ -50,10 +50,11 @@ export const getCovidData = (hashkey) => {
 
 // RETURNS ALL THE KEYS OF COVID AREAS
 // probably for uses in graphs
-export const getAllCovidDataKeys = () => {
+export const getAllCovidData = () => {
     database.ref("/locations").once("value").then(
         function(snapshot) {
-            return Object.keys(snapshot.val());
+          console.log(snapshot.val());
+            return snapshot.val();
         });
 };
 
@@ -62,12 +63,12 @@ export const filterPlaceVisited = (data) =>{
   console.log(data);
   let cleanData = [];
   data.forEach(element => {
-    if(element.placeVisit){
+    if(element.location){
       cleanData.push(
         {
-          "lat":element.placeVisit.location.latitudeE7/10000000, 
-          "lng":element.placeVisit.location.longitudeE7/10000000,
-          "weight": 15
+          "lat":element.location.latitudeE7/10000000,
+          "lng":element.location.longitudeE7/10000000,
+          "weight": 15 * element.count
         });
     }
   });
