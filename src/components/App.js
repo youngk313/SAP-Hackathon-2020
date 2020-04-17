@@ -11,6 +11,7 @@ import UserStatusCard from './UserStatusCard';
 import Fileuploader from "./Fileuploader";
 import ProfilePage from './ProfilePage';
 import SideBar from './SideBar';
+import Map from './Map';
 
 // Authentication
 import SignUp from './SignUp';
@@ -25,7 +26,7 @@ export const App = () => {
       <div class="container">
         <SideBar></SideBar>
           <div class = "grid-container">
-            <div class="left-box"> sdfsdfsdfdfsdfsdfsdfs sdfsdfdsfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfsdfsdfs sdfsdfdsfsdf</div>
+            <div class="left-box"> <Map> </Map></div>
             <div class="right-box"> sdfsdfsdfsdfdsfsdfdsfsdfsdf </div>
             <div class = "bottom-left-box"> <UserStatusCard class = "bottom-left-box" healthStatus={"quarantine"}> </UserStatusCard> </div>
             <div class="bottom-right-box"></div>
