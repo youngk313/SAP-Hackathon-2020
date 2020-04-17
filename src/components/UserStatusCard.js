@@ -10,7 +10,7 @@ import StayHomeImg from '../img/stayhome.png';
 import Grid from '@material-ui/core/Grid';
 import QuarantineInformation from '../responses/tips.json';
 const imgStyle = {
-  width: '360px'
+  width: '80%'
 };
 const buttonStyle = {
   borderRadius: "25px",
@@ -61,18 +61,19 @@ class UserStatusCard extends React.Component{
   render(){
     let response = this.returnResponseToLoad();
     return(
-      <Grid alignItems="center" justify="center" spacing={0} item xs={3}>
-        <Card style={{ width: '25rem'}}>
+        <Card style={{width:"60%", margin:"auto", textAlign:'center'}}>
           <CardContent>
           <Typography> {this.state.healthStatus} </Typography> <br/>
           <Typography align = 'left'> What should I do? </Typography> <br/>
           <Typography align = 'left'> {response[0].tip} </Typography> <br/>
-          <img src = {this.returnImageToLoad(this.state.healthStatus)} alt = "social_distance" style={imgStyle}/>
-          <Link href="#" onClick='#' color="inherit" style={{float: "left"}}> More information </Link> <br/> <br/> <br/> <br/>
+          <div>
+           <img src = {this.returnImageToLoad(this.state.healthStatus)} alt = "social_distance" style={imgStyle}/>
+          </div>
+          <Link href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses" target="_blank" onClick='#' color="inherit" style={{float: "left"}}> More information </Link> <br/> <br/> <br/> <br/>
           {this.createButtons(response)}
+          <Button></Button>
           </CardContent>
         </Card>
-      </Grid>
     );
   }
 

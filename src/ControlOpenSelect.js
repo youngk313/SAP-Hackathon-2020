@@ -54,7 +54,7 @@ export default function ControlledOpenSelect(props) {
                 onChange={handleChange}
                 input={<Input />}
               >
-                <MenuItem value="">
+                <MenuItem value={""}>
                   <em>None</em>
                 </MenuItem>
                 <MenuItem value={"Canada"}>Canada</MenuItem>
