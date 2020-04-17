@@ -22,6 +22,7 @@ export const App = () => {
 	return (
 		<userContext.Provider value={{ user }}>
     <div className="App">
+			<Fileuploader/>
       <div class="container">
         <SideBar></SideBar>
           <div class = "grid-container">
