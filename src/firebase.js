@@ -1,4 +1,4 @@
-import firebase from "firebase/app";
+/*import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
 
@@ -27,3 +27,4 @@ export const signInWithGoogle = async () => {
 export const signOut = () => {
     auth.signOut();
 }
+
