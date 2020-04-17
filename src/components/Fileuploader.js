@@ -1,15 +1,44 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import Dropzone from 'react-dropzone';
 import Card from "@material-ui/core/Card";
 import "./Fileuploader.css"
 import { database } from "../firebase";
 import { getNDaysSinceDate} from "../helpers/helpers"
 import { useSession } from './App';
+import {useDropzone} from 'react-dropzone';
 import Modal from '@material-ui/core/Modal';
 import DatePicker from "react-datepicker/es";
 import Button from "@material-ui/core/Button";
 import "../../node_modules/react-datepicker/src/stylesheets/datepicker.scss";
 
+const baseStyle = {
+	flex: 1,
+	display: 'flex',
+	flexDirection: 'column',
+	alignItems: 'center',
+	borderWidth: 2,
+	borderRadius: 2,
+	paddingTop: "10%",
+	borderColor: '#eeeeee',
+	borderStyle: 'dashed',
+	backgroundColor: '#fafafa',
+	color: '#bdbdbd',
+	outline: 'none',
+	transition: 'border .24s ease-in-out',
+	height: "100%"
+};
+
+const activeStyle = {
+	borderColor: '#2196f3'
+};
+
+const acceptStyle = {
+	borderColor: '#00e676'
+};
+
+const rejectStyle = {
+	borderColor: '#ff1744'
+};
 
 const FileUploader = () => {
 	const [progress, setProgress] = useState("waiting");
@@ -18,6 +47,23 @@ const FileUploader = () => {
 	const [startDate, setStartDate] = useState(new Date());
 	const [isDisabled, setisDisabled] = useState(false);
 	const [open, setOpen] = useState(false);
+	const {
+		getRootProps,
+		getInputProps,
+		isDragActive,
+		isDragAccept,
+		isDragReject
+	} = useDropzone();
+
+	const style = useMemo(() => ({
+		...baseStyle,
+		...(isDragActive ? activeStyle : {}),
+		...(isDragAccept ? acceptStyle : {}),
+		...(isDragReject ? rejectStyle : {})
+	}), [
+		isDragActive,
+		isDragReject
+	]);
 
 	const user = useSession();
 	const displayFiles = filesBuffer.map(file => (
@@ -148,17 +194,20 @@ const FileUploader = () => {
 	}
 
 	return(
-			<Card style={{width:"80%", height: "400px"}}>
-				<Dropzone accept={'application/json'} onDrop={fileDropHandler}>
-					{({getRootProps, getInputProps}) => (
-							<section>
-								<div {...getRootProps()}>
-									<input {...getInputProps()} />
-									<p>To find out more COVID-19 information in your area, please upload a file.</p>
-								</div>
-							</section>
-					)}
-				</Dropzone>
+			<Card style={{width:"80%", height: "475px"}}>
+				<div className={"zone"}>
+					<Dropzone accept={'application/json'} onDrop={fileDropHandler}>
+						{({getRootProps, getInputProps}) => (
+								<section className={"inputSpace"}>
+									<div {...getRootProps({style})}>
+										<input {...getInputProps()}/>
+										<p>To find out more COVID-19 information in your area, please upload a file.</p>
+									</div>
+								</section>
+						)}
+					</Dropzone>
+				</div>
+				<div className={"remaining"}>
 				<h4>Files</h4>
 				<ul>{displayFiles}</ul>
 				<Button color ="primary" variant="contained" className={"confirmButton"} onClick={(event) => confirmButtonHandler(event)}>Confirm</Button>
@@ -167,6 +216,7 @@ const FileUploader = () => {
 					<h4>Please select the date you started showing symptoms</h4>
 						<DatePicker selected={startDate} onChange={(event) => datePickHandler(event)}/>
 				</aside>
+				</div>
 			</Card>
 	);
 }
