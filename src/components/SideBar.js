@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import Container from '@material-ui/core/Container';
+import WalkingIcon from '../img/walking.png';
 import styled from "styled-components";
 
 const SidebarContainer = styled.div`
         height: 100vh;
         width: 320px;
-        background-color: #252529;
+        background-color: #1976d2;
         color: #fff;
         display: flex;
         flex-direction: column;
-        font-family: "Roboto", sans-serif;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 `;
 
 const SidebarMenu = styled.ul`
@@ -18,6 +20,8 @@ const SidebarMenu = styled.ul`
         list-style: none;
         width: 100%;
         padding-left: 0px;
+        font-weight: 500;
+        font-size: 0.875rem;
 `;
 
 const MenuLogo = styled.div`
@@ -80,10 +84,10 @@ render() {
         return (
            <SidebarContainer>
                <SidebarMenu>
-                   <MenuLogo>
-                   {" "}
-                   SAP peepee?
-                   </MenuLogo>
+                   <Container maxWidth = "sm">
+                   <img src={WalkingIcon} style={{width:"50px", display:"inline"}}/><p style={{ fontSize:"16pt", display:"inline-block", transform: "translateY(-14px)"}}>Retrace</p>
+
+                   </Container>
                <SidebarMenuItem>
                    <Icon viewBox="0 0 20 20">
                    <path
@@ -143,8 +147,6 @@ render() {
                   </Icon>
                   <SidebarMenuItemLabel>Library</SidebarMenuItemLabel>
                </SidebarMenuItem>
-
-          <MenuSignOut>Sign Out</MenuSignOut>
      </SidebarMenu>
 </SidebarContainer>
 );

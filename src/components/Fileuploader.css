@@ -3,3 +3,29 @@
   height: 100px;
   margin: auto;
 }
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.coronaToggleOn {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: greenyellow;
+}
+
+.coronaToggleOff {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: turquoise;
+}
+
+.hasCorona {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}

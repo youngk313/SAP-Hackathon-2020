@@ -23,26 +23,17 @@ export const App = () => {
 	return (
 		<userContext.Provider value={{ user }}>
     <div className="App">
+			<Fileuploader/>
       <div class="container">
         <SideBar></SideBar>
-          <div class = "grid-container">
-            <div class="left-box"> <Map> </Map></div>
-            <div class="right-box"> sdfsdfsdfsdfdsfsdfdsfsdfsdf </div>
-            <div class = "bottom-left-box"> <UserStatusCard class = "bottom-left-box" healthStatus={"quarantine"}> </UserStatusCard> </div>
-            <div class="bottom-right-box"></div>
-
-          </div>
-
+          <Grid container spacing ={2}>
+			<Grid item xs={12}></Grid>
+            <Grid item xs={5} > <Charts/></Grid>
+            <Grid item xs ={7} > <Map> </Map> </Grid>
+            <Grid item xs ={5}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
+            <Grid item xs ={7}> sdfsdfsdfsdfdsfsdfdsfsdfsdf </Grid>
+		</Grid>
       </div>
-
-
-        {/* <Grid container spacing ={2}>
-          <Grid item xs = {12}>
-            <Charts/>
-          </Grid>
-        </Grid> */}
-
-      {/* <UserStatusCard healthStatus='healthy'></UserStatusCard>  */}
     </div>
 
 

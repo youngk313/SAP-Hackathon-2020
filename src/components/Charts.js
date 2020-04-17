@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts';
+import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer} from 'recharts';
 import * as aprilData from '../locations/2020_APRIL.json';
 import {getLocationNameAndCoordinates} from '../locationParser';
 import ControlledOpenSelect from '../ControlOpenSelect';
@@ -12,7 +12,7 @@ import { getLocationAndTime } from '../timeParser';
 
 const margins = {top: 5, right: 5, left:5, bottom:5}
 const url = "https://pomber.github.io/covid19/timeseries.json";
-const cutOffDate = "2020-04-01";
+const cutOffDate = "2020-04-03";
 
 export default class  Chart extends React.Component {
     constructor(props) {
@@ -48,21 +48,23 @@ export default class  Chart extends React.Component {
     }
     render() {
     return (
-        <div >
-            <Card style={{margin:'auto', width: '80%', textAlign: 'center'}}>
+        <div style={{margin:'50px'}}>
+            <Card style={{margin:'auto', width: '100%', textAlign: 'center'}}>
                 <CardHeader title={"COVID-19 Stats for " + this.state.country} style={{margin:'auto'}}></CardHeader>
                 <ControlledOpenSelect changeCountry={this.changeCountry} ></ControlledOpenSelect>
                 <CardContent>
-                    <BarChart width={730} height={250} data={this.state.cases} margin={margins} style={{margin:'auto'}}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="Confirmed" fill="#8884d8" />
-                        <Bar dataKey="Deceased" fill="#FF0000" />
-                        <Bar dataKey="Recovered" fill="00FF00" />
-                    </BarChart>
+                    <ResponsiveContainer width="90%" height={300}>
+                        <BarChart data={this.state.cases} margin={margins} style={{margin:'auto'}}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="date" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Bar dataKey="Confirmed" fill="#000000" />
+                            <Bar dataKey="Deceased" fill="#FF0000" />
+                            <Bar dataKey="Recovered" fill="#149414" />
+                        </BarChart>
+                    </ResponsiveContainer>
                 </CardContent>
             </Card>
         </div>
