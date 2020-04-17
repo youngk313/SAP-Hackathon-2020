@@ -4,8 +4,8 @@ import WalkingIcon from '../img/walking.png';
 import styled from "styled-components";
 
 const SidebarContainer = styled.div`
-        height: 100vh;
-        width: 320px;
+        height: 100%;
+        width: "100%";
         background-color: #1976d2;
         color: #fff;
         display: flex;

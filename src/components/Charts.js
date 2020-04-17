@@ -12,7 +12,7 @@ import { getLocationAndTime } from '../timeParser';
 
 const margins = {top: 5, right: 5, left:5, bottom:5}
 const url = "https://pomber.github.io/covid19/timeseries.json";
-const cutOffDate = "2020-04-03";
+const cutOffDate = "2020-04-02";
 
 export default class  Chart extends React.Component {
     constructor(props) {

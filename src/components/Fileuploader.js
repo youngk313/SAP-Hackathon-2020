@@ -6,7 +6,7 @@ import { database } from "../firebase";
 import { getNDaysSinceDate} from "../helpers/helpers"
 import { useSession } from './App';
 import DatePicker from "react-datepicker/es";
-import "react-datepicker/dist/react-datepicker.css";
+import "../../node_modules/react-datepicker/src/stylesheets/datepicker.scss";
 
 
 const FileUploader = () => {
