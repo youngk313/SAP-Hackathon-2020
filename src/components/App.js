@@ -14,7 +14,7 @@ export default function App() {
           <div class = "grid-container">
             <div class="left-box"> sdfsdfsdfdfsdfsdfsdfs sdfsdfdsfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfdfsdfsdfsdfs sdfsdfdsfsdfdfsdfsdfsdfs sdfsdfdsfsdfsdfsdfsdfs sdfsdfdsfsdf</div>
             <div class="right-box"> sdfsdfsdfsdfdsfsdfdsfsdfsdf </div>
-            <div class="bottom-left-box"> <UserStatusCard healthStatus='healthy'> </UserStatusCard> </div>
+            <div class = "bottom-left-box"> <UserStatusCard class = "bottom-left-box" healthStatus={"quarantine"}> </UserStatusCard> </div>
             <div class="bottom-right-box"></div>
 
           </div>

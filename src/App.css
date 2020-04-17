@@ -1,4 +1,6 @@
-
+.App{
+  background-color: #F9FAFB;
+}
 
 .App-logo {
   height: 40vmin;
@@ -10,7 +12,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 
 .App-link {
@@ -38,7 +39,6 @@
 }
 
 .bottom-left-box{
-  background-color: pink;
   grid-column: 1/3;
 }
 
