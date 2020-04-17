@@ -1,0 +1,35 @@
+{
+  "responses": [
+    {
+      "content":[{
+          "title": "Practice Social Distancing",
+          "tip": "To be safe you should practice social distancing and stay away at least 2m from others",
+          "button_text": "I tested positive",
+          "button_text2": ""
+        }]
+    },
+
+    {
+      "content": [{
+      "title": "Quarantine",
+      "tip": "Please monitor your symptoms and self-isolate for 14 more days. After this period you wil lbe considered healthy again",
+      "button_text": "I tested positive",
+      "button_text2": "I tested negative"
+      }]
+    },
+
+    {
+      "content": [{
+      "title": "stay home idiot",
+      "tip": "We wish you a speedy recovery. Please monitor your symptoms and stay in quarantine as long as you've been advised by your doctor.",
+      "button_text": "I had no symptoms for 48 hours",
+      "button_text2": "" 
+      }]
+
+    }
+
+
+
+
+  ]
+}
