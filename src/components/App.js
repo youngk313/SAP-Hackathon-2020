@@ -18,7 +18,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-
 import Charts from './Charts';
 import UserStatusCard from './UserStatusCard';
 import Fileuploader from "./Fileuploader";
@@ -109,15 +108,17 @@ export const App = () => {
 		</nav>
 		<main>
           <Grid container maxWidth="md"spacing ={1}>
-			<Grid item xs={2}>
+			<Grid item xs={1}>
 
 			</Grid>
 			<Grid item xs ={4}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>
-            <Grid item xs ={6} style = {{paddingTop:"20px"}}> <Map > </Map> </Grid>
+            <Grid item xs ={6} style = {{paddingTop:"40px"}}> <Map > </Map> </Grid>
 			<Grid item xs ={2}></Grid>
-			<Grid item xs={4} > <Charts/></Grid>
+			<Grid item xs = {2} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
 			<Grid item xs ={2}></Grid>
-            <Grid item xs = {2} style = {{paddingTop:"50px"}}> <Fileuploader/></Grid>
+			<Grid item xs={4} style ={{paddingLeft:"40px"}} > <Charts/></Grid>
+
+
 
 		</Grid>
 		</main>

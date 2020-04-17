@@ -148,7 +148,7 @@ const FileUploader = () => {
 	}
 
 	return(
-			<Card style={{width:"80%", height: "200px"}}>
+			<Card style={{width:"80%", height: "400px"}}>
 				<Dropzone accept={'application/json'} onDrop={fileDropHandler}>
 					{({getRootProps, getInputProps}) => (
 							<section>

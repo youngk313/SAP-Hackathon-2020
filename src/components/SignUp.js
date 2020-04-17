@@ -11,7 +11,6 @@ const SignUp = () => {
     const [error, setError] = useState(null);
     const history = useHistory();
 
-
     const onChangeHandler = event => {
         const { name, value } = event.currentTarget;
         if (name === "userEmail") {
