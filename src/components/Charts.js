@@ -1,14 +1,52 @@
 import React from 'react';
 import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts';
 import * as aprilData from '../locations/2020_APRIL.json';
-import {getLocationName, getLocationCoordinates} from '../locationParser';
+import {getLocationNameAndCoordinates} from '../locationParser';
+import ControlledOpenSelect from '../ControlOpenSelect';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import {formatData} from '../covidDataRequest';
+import { getLocationAndTime } from '../timeParser';
 
-const data = [{name: 'BC', 'Number of Cases': 400, 'Number of Deaths': 300}, {name:'f', pv: [30]}]
+
 const margins = {top: 5, right: 5, left:5, bottom:5}
+const url = "https://pomber.github.io/covid19/timeseries.json";
+const cutOffDate = "2020-04-01";
 
+export default class  Chart extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cases: null,
+            country: 'Canada',
+        }
+        this.changeCountry = this.changeCountry.bind(this);
+    }
 
-export default function Charts() {
-    getLocationName(aprilData);
+    async updateCountryData() {
+        const response = await fetch(url);
+        const responseData = await response.json();
+        this.setState({cases: formatData(responseData, this.state.country, cutOffDate)});
+    }
+
+    componentDidMount() {
+        getLocationNameAndCoordinates(aprilData);
+        getLocationAndTime(aprilData);
+
+    }
+
+    componentWillMount() {
+        this.updateCountryData();
+    }
+
+    changeCountry(country) {
+        this.setState ({
+            country: country
+        })
+        this.updateCountryData();
+    }
+    render() {
     return (
         <div >
             <Card style={{margin:'auto', width: '80%', textAlign: 'center'}}>
@@ -18,7 +56,7 @@ export default function Charts() {
                     <BarChart width={730} height={250} data={this.state.cases} margin={margins} style={{margin:'auto'}}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="date" />
-                        <YAxis label ={{value:'Number Of Cases', angle: -90, position: 'insideLeft' }}/>
+                        <YAxis />
                         <Tooltip />
                         <Legend />
                         <Bar dataKey="Confirmed" fill="#8884d8" />
@@ -29,4 +67,5 @@ export default function Charts() {
             </Card>
         </div>
       );
+    }
 }
