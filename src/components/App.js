@@ -25,6 +25,7 @@ export const App = () => {
       <div class="container">
         <SideBar></SideBar>
           <Grid container spacing ={2}>
+			<Grid item xs={12}></Grid>
             <Grid item xs={5} > <Charts/></Grid>
             <Grid item xs ={7} > sdfsdfsdfsdfdsfsdfdsfsdfsdf </Grid>
             <Grid item xs ={5}> <UserStatusCard style ={{margin:'auto'}}healthStatus={"quarantine"}> </UserStatusCard> </Grid>

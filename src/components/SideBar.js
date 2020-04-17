@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Container from '@material-ui/core/Container';
+import WalkingIcon from '../img/walking.png';
 import styled from "styled-components";
 
 const SidebarContainer = styled.div`
@@ -82,10 +84,10 @@ render() {
         return (
            <SidebarContainer>
                <SidebarMenu>
-                   <MenuLogo>
-                   {" "}
-                   SAP peepee?
-                   </MenuLogo>
+                   <Container maxWidth = "sm">
+                   <img src={WalkingIcon} style={{width:"50px", display:"inline"}}/><p style={{ fontSize:"16pt", display:"inline-block", transform: "translateY(-14px)"}}>Retrace</p>
+
+                   </Container>
                <SidebarMenuItem>
                    <Icon viewBox="0 0 20 20">
                    <path
@@ -145,8 +147,6 @@ render() {
                   </Icon>
                   <SidebarMenuItemLabel>Library</SidebarMenuItemLabel>
                </SidebarMenuItem>
-
-          <MenuSignOut>Sign Out</MenuSignOut>
      </SidebarMenu>
 </SidebarContainer>
 );
