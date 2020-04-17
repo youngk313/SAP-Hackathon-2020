@@ -12,13 +12,11 @@ const FileUploader = () => {
 	const user = useSession();
 
 	const fileDropHandler = acceptedFiles => {
-		const newArray = filesBuffer.slice();
-		newArray.push(acceptedFiles);
+		let newArray = filesBuffer.slice();
 
-		setFilesBuffer(newArray);
+		setFilesBuffer(newArray.concat(acceptedFiles));
 
 		console.log(acceptedFiles);
-		console.log(this.state.filesBuffer);
 	};
 
 	const onComplete = (e) => {
@@ -27,19 +25,28 @@ const FileUploader = () => {
 		});
 	}
 
-	const confirmButtonHandler = (event) => {
+	const confirmButtonHandler = async (event) => {
 		event.stopPropagation();
 
-		console.log(this.state.progress);
+		console.log(progress);
+		console.log(filesBuffer);
 
-		onComplete = (e) => {
+		let onComplete = (e) => {
 			setProgress("complete");
 		};
 
 		if(progress === "waiting") {
-			database.ref('users/' + user.uid).push(filesBuffer, (e) => onComplete(e));
-			this.setState({progress: "sending"});
-			// fr.readAsText()
+			for(let i = 0; i < filesBuffer.length; i++) {
+
+				let p = filesBuffer[i].text();
+				console.log(p);
+				await p.then(function(s) {
+
+					let json = JSON.parse(s);
+					database.ref('users/' + "useruid").push(json, (e) => onComplete(e));
+				})
+				setProgress("sending");
+			}
 		}
 	};
 
