@@ -3,3 +3,22 @@
   height: 100px;
   margin: auto;
 }
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.coronaToggle {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: #61dafb;
+}
+
+.hasCorona {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
