@@ -18,19 +18,25 @@ export const getInfectedPlaces = async (userId) => {
     const snapshot = await database.ref("/users/" + userId).once("value");
 
     let locations = snapshot.val();
+    if (!locations) {
+      return;
+    }
     let keys = Object.keys(locations);
-    let infectedKeys = Array(0);
-    console.log(keys);
+    let infectedData = [];
 
     // this is gross i know but bear with me its a proof of concept Xd
     for(let i = 0; i < keys.length; i++) {
         const locationSnapshot = await database.ref("/locations/" + keys[i]).once("value");
-        if(locationSnapshot.val() != null) {
-            infectedKeys.append(keys[i]);
+        const locationData = locationSnapshot.val();
+        if(!!locationData) {
+            infectedData.push({
+              address: locationData.location.address,
+              from: (new Date(parseInt(locationData.duration.startTimestampMs))).toLocaleString(),
+              to: (new Date(parseInt(locationData.duration.endTimestampMs))).toLocaleString()
+            });
         }
     }
-    console.log(infectedKeys);
-    return infectedKeys;
+    return infectedData;
 };
 
 // GETS THE COVID DATA BASED ON A KEY (HASHKEY)
