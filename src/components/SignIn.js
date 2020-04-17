@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { signInWithGoogle } from '../firebase';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../firebase';
+import { signInWithEmailAndPasswordHandler, signInWithGoogleHandler } from '../helpers/authHelpers'
 
 const SignIn = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');
 
-	const signInWithEmailAndPasswordHandler = (event, email, password) => {
-		event.preventDefault();
-	};
+	const history = useHistory();
 
 	const onChangeHandler = (event) => {
 		const {name, value } = event.currentTarget;
@@ -47,12 +46,14 @@ const SignIn = () => {
 						id="userPassword"
 						onChange = {(event) => onChangeHandler(event)}
 					/>
-				<button onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}}>
+				<button onClick = {(event) => {signInWithEmailAndPasswordHandler(event, auth, email, password, history)}}>
 					Sign in
 				</button>
 				</form>
 				<p>or</p>
-				<button>
+				<button
+				onClick={(event) => signInWithGoogleHandler(event, auth, history)}
+				>
 				Sign in with Google
 				</button>
 				<p className="text-center my-3">
