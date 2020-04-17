@@ -9,6 +9,30 @@
   left: -9999px !important;
 }
 
+.zone {
+  position: relative;
+  display: flex;
+  text-align: center;
+  vertical-align: center;
+  height: 30%;
+  width: 94%;
+  padding-top: 10%;
+  left: 2.5%;
+}
+
+.remaining {
+  position: relative;
+  padding-top: 3%;
+  left: 5%
+}
+
+.inputSpace {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 .coronaToggleOn {
   margin: auto;
   background-color:  #1976d2;
