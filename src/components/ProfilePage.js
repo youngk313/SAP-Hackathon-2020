@@ -32,8 +32,8 @@ const ProfilePage = () => {
                 }}
                 className="border border-blue-300"
             ></div>
-            <div className = "md:pl-4">
-            <img src={user.photoURL || "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7c%2FProfile_avatar_placeholder_large.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AProfile_avatar_placeholder_large.png&tbnid=gp8LDHLwxDk-WM&vet=12ahUKEwj8-5uS5-_oAhWUFjQIHekbAhEQMygHegUIARCGAg..i&docid=xZyB11jLps67TM&w=360&h=360&q=avatar%20photo&hl=en-GB&ved=2ahUKEwj8-5uS5-_oAhWUFjQIHekbAhEQMygHegUIARCGAg"}/>
+            <div className = "md:pl-4" style ={{textAlign: "center"}}>
+            <img style ={{width:"100px"}}src={user.photoURL || "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7c%2FProfile_avatar_placeholder_large.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AProfile_avatar_placeholder_large.png&tbnid=gp8LDHLwxDk-WM&vet=12ahUKEwj8-5uS5-_oAhWUFjQIHekbAhEQMygHegUIARCGAg..i&docid=xZyB11jLps67TM&w=360&h=360&q=avatar%20photo&hl=en-GB&ved=2ahUKEwj8-5uS5-_oAhWUFjQIHekbAhEQMygHegUIARCGAg"}/>
             <h2 className = "text-2xl font-semibold">{user.displayName || 'No display name specified'}</h2>
             <h3 className = "italic">{user.email}</h3>
             </div>
